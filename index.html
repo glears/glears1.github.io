@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>BINGO JENNER</title>
+
+  <link rel="preload">
+  <!---CONNECTING THE FONTS AND OTHER LINKS--->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="images/logo1.png" />
+</head>
+
+<body>
+
+  <div id="preloader"></div>
+
+  <!---BEGGINING OF THE WEBSITE... NAVIGATION BAR--->
+  <section class="header">
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <!---INSERTED 2 ICONS FOR NAV-BAR IN THE MOBILE VIEW--->
+        <span class="material-icons" id="close" onclick="HideMenu()">close</span>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="giochi.html">GIOCHI</a></li>
+          <li><a href="eventi.html">EVENTI</a></li>
+          <li><a href="food&drink.html">FOOD & DRINK</a></li>
+          <li><a href="chisiamo.html">CHI SIAMO</a></li>
+          <li><a href="contatti.html">CONTATTI</a></li>
+        </ul>
+      </div>
+      <span class="material-icons" onclick="ShowMenu()">menu</span>
+    </nav>
+<!---INSERT LOGO--->
+<div class="logo">
+  <img src="images/1stlogo.png">
+</div>
+
+  </section>
+
+  <section class="bingos">
+
+    <h1>I PREMI BINGO</h1>
+
+    <div class="row">
+
+      <div class="bingo-tipi">
+        <!---MAKING A BUTTON SO IT OPENS A POPUP--->
+          <button class="btn" onclick="togglePopUp()"><img src="images/speciale.png">
+      </div>
+
+      <div class="bingo-tipi">
+        <!---MAKING A BUTTON SO IT OPENS A POPUP--->
+          <button class="btn" onclick="togglePopUp()"><img src="images/one.png">
+      </div>
+
+      <div class="bingo-tipi">
+        <!---MAKING A BUTTON SO IT OPENS A POPUP--->
+          <button class="btn" onclick="togglePopUp()"><img src="images/happy.png">
+      </div>
+    </div>
+
+    <!---CREATING A POPUP FOR THE BINGOS--->
+
+    <div class="popup" id="popup-1">
+      <div class="overlay" onclick="togglePopUp()"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopUp()">&times;</div>
+          <div class="imazh">
+        <img src="images/happyimg.png">
+      </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-2">
+      <div class="overlay" onclick="togglePopUp()"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopUp()">&times;</div>
+          <div class="imazh">
+        <img src="images/happyimg.png">
+      </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-3">
+      <div class="overlay" onclick="togglePopUp()"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopUp()">&times;</div>
+          <div class="imazh">
+        <img src="images/happyimg.png">
+      </div>
+      </div>
+    </div>
+
+    <div class="hide">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/14CjyUYO8lE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/14CjyUYO8lE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/14CjyUYO8lE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+  </section>
+
+  <!--- FOOTER --->
+
+  <footer>
+    <div class="footer-content">
+      <h3>BINGO JENNER</h3>
+      <p>Sala Bingo, Slot e Videolottery.
+        <br>Il Bingo Jenner è una sala del Concessionario HBG ENTERTAINMENT, concessione numero 292</p>
+
+        <ul class="socials">
+          <a href="https://www.facebook.com/bingojenner"><img src="icons/facebook.png"></a>
+          <a href="#"><img src="icons/instagram.png"></a>
+          <a href="#"><img src="icons/twitter.png"></a>
+        </ul>
+
+        <div class="footer-bottom">
+          <p>Copyright &copy; 2022 HBG ENTERTAINMENT</p>
+        </div>
+    </div>
+  </footer>
+
+  <script>
+
+  function togglePopUp(){
+    document.getElementById("popup-1").classList.toggle("active");
+  }
+
+  var navLinks =document.getElementById("navLinks");
+
+  function ShowMenu(){
+    navLinks.style.right = "0";
+  }
+
+  function HideMenu(){
+    navLinks.style.right = "-200px";
+  }
+  </script>
+
+  <script>
+
+  var loader = document.getElementById('preloader');
+
+  window.addEventListener("load", function(){
+    loader.style.display = "none";
+  })
+
+  document.body.style.overflow = "unset";
+
+  </script>
+
+
+
+</body>
+</html>

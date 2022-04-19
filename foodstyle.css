@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(imagesfood/gjethe2.png), linear-gradient(rgba(40,57,15,0.7), rgba(40,57,15,0.7)), url(imagesfood/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+}
+
+nav{
+  width: 100%;
+  display: inline;
+  padding: 2% 6%;
+  justify-content: space-between;
+  position: fixed;
+  right: -5%;
+}
+
+.nav-links{
+  align-items: center;
+  text-align: center;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  margin-right: 40px;
+}
+
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow:1px 1px 1px #000000;
+}
+
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition:0.7s;
+}
+
+.nav-links ul li:hover::after{
+  width:100%;
+}
+
+img{
+  width: 21%;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 85px;
+  animation-name: ex;
+  animation-duration: 3.5s;
+}
+
+@keyframes ex {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+
+/*MENU CIRCLES*/
+
+.menu{
+  width: 90%;
+  margin: auto;
+  padding-top: 50px;
+
+}
+
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn{
+  border-width: 0px;
+  border-radius: 50%;
+  height: 250px;
+  width: 270px;
+}
+
+.menu-circle{
+  flex-basis: 25%;
+  background: #fff;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  border-style: none;
+  border-width: 0px;
+  transition: transform 0.7s;
+  box-shadow: 0px;
+}
+
+.menu-circle img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.menu-circle:hover{
+  transform: scale(1.2);
+}
